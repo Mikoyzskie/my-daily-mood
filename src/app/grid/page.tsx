@@ -1,14 +1,11 @@
 import { Cell } from "@/components/cell"
 
-
-const rows = [1, 2, 3, 4, 5]
-
 export default function page() {
   return (
-    <div className="grid grid-cols-5 w-fit gap-1">
+    <div className="grid grid-cols-53 w-fit">
       {
-        rows.map((row: number) =>
-          <Cell id={row} key={row} />
+        Array.from({ length: 365 }).map((_, index: number) =>
+          <Cell key={index + 1} />
         )
       }
     </div>
